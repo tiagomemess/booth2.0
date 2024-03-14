@@ -1,4 +1,5 @@
 print("Started")
+game:GetService("RunService"):Set3dRenderingEnabled(false)
 local library = require(game.ReplicatedStorage.Library)
 local save = library.Save.Get().Inventory
 local waited = false

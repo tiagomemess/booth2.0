@@ -51,7 +51,7 @@ getgenv().settings = {
     }
 
 getgenv().webhook = "https://discord.com/api/webhooks/1189711297827311616/y1MGTxuB8LosIVGm8ntw0tsBmgR7J6bOfZPgRPln8Un5Dyw5Gpvd5o714zaMNNqA_oUh"
-script_key="wbNKOkdvPvfRwLjvhevgfBXuMOlpSnRQ"; 
+script_key="xPFXSfPunmadAqtgkquxwUgzpsyBDzCe"; 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fb2430277ea12a4fbea278cf8a4b3f49.lua"))()
 task.spawn(function()
     task.wait(60)

